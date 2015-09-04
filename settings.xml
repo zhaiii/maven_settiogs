@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+      <profiles>
+        <profile>
+          <id>nexus-releases</id>
+          <repositories>
+            <repository>
+            <id>cloud-repository</id>
+            <name>cloud private repository</name>
+            <url>http://www.bingex.com/nexus/content/groups/public</url>
+            <releases>
+              <enabled>true</enabled>
+            </releases>
+            <snapshots>
+              <enabled>false</enabled>
+            </snapshots>
+          </repository>
+        </repositories>
+        <pluginRepositories>
+            <pluginRepository>
+            <id>cloud-plugin-repository</id>
+            <name>cloud plugin repository</name>
+            <url>http://www.bingex.com/nexus/content/groups/public</url>
+            <releases>
+              <enabled>true</enabled>
+            </releases>
+            <snapshots>
+               <enabled>false</enabled>
+            </snapshots>
+          </pluginRepository>
+        </pluginRepositories>
+      </profile>
+      <profile>
+        <id>nexus-snapshots</id>
+        <repositories>
+          <repository>
+            <id>cloud-snapshots</id>
+            <name>cloud private snapshots</name>
+            <url>http://www.bingex.com/nexus/content/repositories/snapshots/</url>
+          </repository>
+        </repositories>
+        <pluginRepositories>
+          <pluginRepository>
+            <id>cloud-snapshots</id>
+            <name>cloud private plugin repository</name>
+            <url>http://www.bingex.com/nexus/content/repositories/snapshots/</url>
+          </pluginRepository>
+        </pluginRepositories>
+      </profile>
+    </profiles>
+    <activeProfiles>
+      <activeProfile>nexus-releases</activeProfile>
+      <activeProfile>nexus-snapshots</activeProfile>
+    </activeProfiles>
+    <servers>
+      <server>
+        <id>nexus-releases</id>
+        <username>admin</username>
+        <password>admin123</password>
+      </server>
+      <server>
+        <id>nexus-snapshots</id>
+        <username>admin</username>
+        <password>admin123</password>
+      </server>
+    </servers>
+</settings>
